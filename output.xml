@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.3 on win32)" generated="2026-05-27T16:35:17.898674" rpa="false" schemaversion="5">
+<suite id="s1" name="Table Test" source="D:\yun\auto-test-robot-framework\tests\table_test.robot">
+<test id="s1-t1" name="列出特定欄位的資料" line="11">
+<kw name="Open Browser To Page" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:18.128922" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/challenging_dom'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-27T16:35:18.128752" elapsed="3.709407"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-27T16:35:21.838396" elapsed="0.027058"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-05-27T16:35:21.865594" elapsed="0.000178"/>
+</kw>
+<arg>${Table URL}</arg>
+<status status="PASS" start="2026-05-27T16:35:18.128257" elapsed="3.737577"/>
+</kw>
+<kw name="抓取特定欄位的資料" owner="table_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//table/tbody/tr[1]/td[1]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-27T16:35:21.866331" elapsed="0.657405"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:22.830170" level="INFO">${column_count} = 7</msg>
+<var>${column_count}</var>
+<arg>//table/thead/tr/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:22.523886" elapsed="0.306327"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-05-27T16:35:22.830510" level="INFO">${column_count} = 7</msg>
+<var>${column_count}</var>
+<arg>${column_count}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-05-27T16:35:22.830337" elapsed="0.000195"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-05-27T16:35:22.830742" level="INFO">${column} = 2</msg>
+<var>${column}</var>
+<arg>${column}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-05-27T16:35:22.830615" elapsed="0.000146"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${column} &gt; ${column_count} or ${column} &lt; 1</arg>
+<arg>Fail</arg>
+<arg>Invalid column number: ${column}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-05-27T16:35:22.830843" elapsed="0.000164"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:23.137420" level="INFO">${row_count} = 10</msg>
+<var>${row_count}</var>
+<arg>//table/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:22.831089" elapsed="0.306384"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:23.756389" level="INFO">${data} = Apeirian0</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:23.138343" elapsed="0.618086"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:23.756551" elapsed="0.000259"/>
+</kw>
+<var name="${row}">1</var>
+<status status="PASS" start="2026-05-27T16:35:23.138213" elapsed="0.618651"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:24.367819" level="INFO">${data} = Apeirian1</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:23.757104" elapsed="0.610754"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:24.367979" elapsed="0.000253"/>
+</kw>
+<var name="${row}">2</var>
+<status status="PASS" start="2026-05-27T16:35:23.757004" elapsed="0.611283"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:24.979511" level="INFO">${data} = Apeirian2</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:24.368519" elapsed="0.611032"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:24.979674" elapsed="0.000252"/>
+</kw>
+<var name="${row}">3</var>
+<status status="PASS" start="2026-05-27T16:35:24.368422" elapsed="0.611557"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:25.590670" level="INFO">${data} = Apeirian3</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:24.980223" elapsed="0.610487"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:25.590831" elapsed="0.000251"/>
+</kw>
+<var name="${row}">4</var>
+<status status="PASS" start="2026-05-27T16:35:24.980118" elapsed="0.611016"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:26.203142" level="INFO">${data} = Apeirian4</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:25.591377" elapsed="0.611802"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:26.203299" elapsed="0.000286"/>
+</kw>
+<var name="${row}">5</var>
+<status status="PASS" start="2026-05-27T16:35:25.591273" elapsed="0.612357"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:26.815998" level="INFO">${data} = Apeirian5</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:26.203830" elapsed="0.612206"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:26.816155" elapsed="0.000248"/>
+</kw>
+<var name="${row}">6</var>
+<status status="PASS" start="2026-05-27T16:35:26.203747" elapsed="0.612715"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:27.427594" level="INFO">${data} = Apeirian6</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:26.816686" elapsed="0.610949"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:27.427755" elapsed="0.000248"/>
+</kw>
+<var name="${row}">7</var>
+<status status="PASS" start="2026-05-27T16:35:26.816584" elapsed="0.611590"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:28.038665" level="INFO">${data} = Apeirian7</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:27.428388" elapsed="0.610316"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:28.038824" elapsed="0.000277"/>
+</kw>
+<var name="${row}">8</var>
+<status status="PASS" start="2026-05-27T16:35:27.428313" elapsed="0.610841"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:28.651809" level="INFO">${data} = Apeirian8</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:28.039400" elapsed="0.612449"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:28.651973" elapsed="0.000250"/>
+</kw>
+<var name="${row}">9</var>
+<status status="PASS" start="2026-05-27T16:35:28.039295" elapsed="0.612983"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-27T16:35:29.262839" level="INFO">${data} = Apeirian9</msg>
+<var>${data}</var>
+<arg>//table/tbody/tr[${row}]/td[${column}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-27T16:35:28.652503" elapsed="0.610376"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Row ${row} Column ${column}: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-27T16:35:29.263002" elapsed="0.000287"/>
+</kw>
+<var name="${row}">10</var>
+<status status="PASS" start="2026-05-27T16:35:28.652400" elapsed="0.610938"/>
+</iter>
+<var>${row}</var>
+<value>1</value>
+<value>${row_count + 1}</value>
+<status status="PASS" start="2026-05-27T16:35:23.137588" elapsed="6.125794"/>
+</for>
+<arg>2</arg>
+<status status="PASS" start="2026-05-27T16:35:21.866116" elapsed="7.397346"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-27T16:35:29.263731" elapsed="2.386532"/>
+</kw>
+<status status="PASS" start="2026-05-27T16:35:18.127519" elapsed="13.522994"/>
+</test>
+<status status="PASS" start="2026-05-27T16:35:17.900039" elapsed="13.751208"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Table Test" id="s1" pass="1" fail="0" skip="0">Table Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
