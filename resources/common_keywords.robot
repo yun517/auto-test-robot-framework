@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Keywords ***
 Open Browser To Page
     [Arguments]    ${url}
-    Open Browser    ${url}    ${BROWSER}    
+    Open Browser    ${url}    ${browser}    
     Maximize Browser Window
     Set Selenium Speed    0.3s
 
