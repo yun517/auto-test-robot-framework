@@ -7,8 +7,6 @@ Resource          ../resources/checkbox_keywords.robot
 Test Setup       Open Browser To Page    ${checkbox_url}
 Test Teardown    Close Browser
 
-*** Variables ***
-
 *** Test Cases **
 驗證checkbox能被勾選
     設定checkbox狀態    1    ${true}
