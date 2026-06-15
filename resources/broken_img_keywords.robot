@@ -18,4 +18,7 @@ Library    Collections
         END
     END
     
+    # 最後檢查是否有任何圖片無法正常顯示。
+    # 測試角度是確保所有圖片都能正常顯示，因此如果有任何圖片的 naturalWidth 為 0，就表示該圖片無法正常顯示，測試應該失敗。
+    # 因為網站上固定有兩張圖片無法正常顯示，所以測試失敗是預期的結果。
     Should Be Empty    ${broken_images}    以下圖片索引的圖片無法正常顯示: ${broken_images}
