@@ -9,4 +9,5 @@ Test Teardown    Close Browser
 
 *** Test Cases **
 Canvas 應顯示數字
-    讀取 Canvas 圖片上的數字
+    ${canvas_num}=    讀取 Canvas 圖片上的數字
+    檢查是否為五位數    ${canvas_num}
