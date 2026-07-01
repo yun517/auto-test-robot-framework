@@ -10,4 +10,4 @@ Open Browser To Page
 
 頁面應該出現
     [Arguments]    ${expected}
-    Wait Until Page Contains    ${expected}    timeout=5s
+    Wait Until Page Contains    ${expected}    timeout=5s    error=頁面未出現預期文字: ${expected}

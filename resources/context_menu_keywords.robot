@@ -8,4 +8,5 @@ Library    SeleniumLibrary
 
 Alert 應包含文字
     [Arguments]    ${expected_text}
-    Alert Should Be Present    ${expected_text}
+    ${is_present}=    Run Keyword And Return Status    Alert Should Be Present    ${expected_text}
+    Run Keyword If    not ${is_present}    Fail    Alert 未出現預期文字: ${expected_text}
