@@ -8,11 +8,11 @@ Test Setup       Open Browser To Page    ${checkbox_url}
 Test Teardown    Close Browser
 
 *** Test Cases **
-驗證checkbox能被勾選
+checkbox應能被勾選
     設定checkbox狀態    1    ${true}
     檢查特定checkbox是否被勾選    1    ${true}
 
-驗證checkbox能被取消勾選
+checkbox應能被取消勾選
     設定checkbox狀態    1    ${true}
     設定checkbox狀態    1    ${false}
     檢查特定checkbox是否被勾選    1    ${false}
