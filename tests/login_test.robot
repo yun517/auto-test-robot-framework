@@ -11,9 +11,9 @@ Test Teardown    Close Browser
 *** Test Cases ***
 應能夠登入
     輸入帳密並登入    tomsmith    SuperSecretPassword!
-    頁面應該出現    You logged into a secure area!
+    Wait Until Page Contains Text    You logged into a secure area!
 
 應登入失敗
     輸入帳密並登入    tomsmith    錯誤密碼
-    頁面應該出現    Your password is invalid!
+    Wait Until Page Contains Text    Your password is invalid!
 

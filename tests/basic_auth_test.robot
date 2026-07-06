@@ -10,4 +10,4 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 應能夠成功登入
-    頁面應該出現    Congratulations! You must have the proper credentials.
+    Wait Until Page Contains Text    Congratulations! You must have the proper credentials.

@@ -4,8 +4,7 @@ Library    SeleniumLibrary
 *** Keywords ***
 選擇下拉選單選項
     [Arguments]    ${option}
-    Wait Until Element Is Enabled    //select[@id='dropdown']
-    Click Element    //select[@id='dropdown']
+    Wait And Click Element    //select[@id='dropdown']
     Click Element    //select[@id='dropdown']/option[text()='${option}']
 
 驗證下拉選單選項被選擇
