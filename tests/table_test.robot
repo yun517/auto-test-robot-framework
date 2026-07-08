@@ -4,7 +4,7 @@ Resource          ../resources/table_keywords.robot
 Resource          ../resources/common_keywords.robot
 Resource          ../resources/variables.robot
 
-Test Setup       Open Browser To Page    ${table_url}
+Test Setup       開啟頁面    ${table_url}
 Test Teardown    Close Browser
 
 *** Test Cases **

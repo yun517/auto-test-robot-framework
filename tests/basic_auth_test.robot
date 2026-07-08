@@ -5,7 +5,7 @@ Resource          ../resources/variables.robot
 Resource          ../resources/basic_auth_keywords.robot
 
 # 每個test case執行前都會執行的關鍵字
-Test Setup       Open Browser To Page    ${basic_auth_url}
+Test Setup       開啟頁面    ${basic_auth_url}
 Test Teardown    Close Browser
 
 *** Test Cases ***

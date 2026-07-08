@@ -4,7 +4,7 @@ Resource          ../resources/common_keywords.robot
 Resource          ../resources/variables.robot
 Resource          ../resources/checkbox_keywords.robot
 
-Test Setup       Open Browser To Page    ${checkbox_url}
+Test Setup       開啟頁面    ${checkbox_url}
 Test Teardown    Close Browser
 
 *** Test Cases **

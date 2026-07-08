@@ -4,7 +4,7 @@ Resource          ../resources/common_keywords.robot
 Resource          ../resources/variables.robot
 Resource          ../resources/canvas_keywords.robot
 
-Test Setup       Open Browser To Page    ${challenging_dom_url}
+Test Setup       開啟頁面    ${challenging_dom_url}
 Test Teardown    Close Browser
 
 *** Test Cases **

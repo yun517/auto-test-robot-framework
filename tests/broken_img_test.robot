@@ -4,7 +4,7 @@ Resource          ../resources/common_keywords.robot
 Resource          ../resources/variables.robot
 Resource          ../resources/broken_img_keywords.robot
 
-Test Setup       Open Browser To Page    ${broken_img_url}
+Test Setup       開啟頁面    ${broken_img_url}
 Test Teardown    Close Browser
 
 *** Test Cases **

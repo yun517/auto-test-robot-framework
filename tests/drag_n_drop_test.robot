@@ -4,7 +4,7 @@ Resource          ../resources/common_keywords.robot
 Resource          ../resources/variables.robot
 Resource          ../resources/drag_n_drop_keywords.robot
 
-Test Setup       Open Browser To Page    ${drag_and_drop_url}
+Test Setup       開啟頁面    ${drag_and_drop_url}
 Test Teardown    Close Browser
 
 *** Test Cases **

@@ -4,7 +4,7 @@ Resource          ../resources/common_keywords.robot
 Resource          ../resources/variables.robot
 Resource          ../resources/dynamic_controls_keywords.robot
 
-Test Setup       Open Browser To Page    ${dynamic_controls_url}
+Test Setup       開啟頁面    ${dynamic_controls_url}
 Test Teardown    Close Browser
 
 *** Test Cases **

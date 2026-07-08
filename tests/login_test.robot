@@ -5,7 +5,7 @@ Resource          ../resources/login_keywords.robot
 Resource          ../resources/variables.robot
 
 ## 每個test case執行前都會執行的關鍵字
-Test Setup       Open Browser To Page    ${login_url}
+Test Setup       開啟頁面    ${login_url}
 Test Teardown    Close Browser
 
 *** Test Cases ***

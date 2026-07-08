@@ -4,7 +4,7 @@ Resource          ../resources/common_keywords.robot
 Resource          ../resources/variables.robot
 Resource          ../resources/context_menu_keywords.robot
 
-Test Setup       Open Browser To Page    ${context_menu_url}
+Test Setup       開啟頁面    ${context_menu_url}
 Test Teardown    Close Browser
 
 *** Test Cases **
