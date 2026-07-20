@@ -14,4 +14,6 @@ ${dynamic_loading_url}    https://the-internet.herokuapp.com/dynamic_loading
 ${file_download_url}    https://the-internet.herokuapp.com/download
 ${file_upload_url}    https://the-internet.herokuapp.com/upload
 ${nested_frames_url}    https://the-internet.herokuapp.com/nested_frames
-${ifrmae_url}    https://the-internet.herokuapp.com/iframe
+${multiple_windows_url}    https://the-internet.herokuapp.com/windows
+${hovers_url}    https://the-internet.herokuapp.com/hovers
+${sortable_data_tables_url}    https://the-internet.herokuapp.com/tables

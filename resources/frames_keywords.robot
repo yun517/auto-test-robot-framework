@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library           String
 
 *** Keywords ***
 切換至指定Frame
